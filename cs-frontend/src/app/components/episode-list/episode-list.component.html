@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Air Date</th>
+      <th>Episode</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let episode of episodes">
+      <td>{{ episode.id }}</td>
+      <td>{{ episode.name }}</td>
+      <td>{{ episode.airDate }}</td>
+      <td>{{ episode.episode }}</td>
+      <td>
+        <button (click)="viewEpisode(episode.id)">View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
