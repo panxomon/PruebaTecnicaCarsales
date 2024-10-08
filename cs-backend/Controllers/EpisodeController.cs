@@ -5,11 +5,11 @@ namespace rym.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EpisodesController : ControllerBase
+    public class EpisodeController : ControllerBase
     {
         private readonly IService _episodeService;
 
-        public EpisodesController(IService episodeService)
+        public EpisodeController(IService episodeService)
         {
             _episodeService = episodeService;
         }

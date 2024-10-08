@@ -26,6 +26,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IRepository<EpisodeResponse>, HttpRepository<EpisodeResponse>>();
+builder.Services.AddScoped<IRepository<Result>, HttpRepository<Result>>();
 builder.Services.AddScoped<IService, EpisodeService>();
 
 var app = builder.Build();

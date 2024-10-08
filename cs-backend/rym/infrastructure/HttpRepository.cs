@@ -18,9 +18,16 @@ namespace rym.infrastructure
             {
                 var response = await client.GetAsync(url);
 
+                if (response == null)
+                {
+                    Console.WriteLine($"RESPUESTA NULA");
+                    throw new Exception("RESPUESTA NULA");
+                }
+                
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
+                    
                     return JsonConvert.DeserializeObject<T>(content);
                 }
 
