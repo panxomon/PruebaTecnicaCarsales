@@ -2,11 +2,13 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { Routes, provideRouter } from '@angular/router';
-import { EpisodeListComponent } from './components/episode-list/episode-list.component'; 
+import { EpisodesComponent } from './features/list/component/episodes.component'
+import { DetailsComponent } from './features/details/component/details.component'
 
 
 export const appRoutes: Routes = [
-  {path: 'episode', component: EpisodeListComponent,},  
+  {path: 'episodes', component: EpisodesComponent,},  
+  {path: 'episode/:id', component: DetailsComponent },
 ];
 
 bootstrapApplication(AppComponent, {

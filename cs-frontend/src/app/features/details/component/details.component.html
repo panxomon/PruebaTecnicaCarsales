@@ -1,0 +1,36 @@
+<div *ngIf="episode">
+    <h2>{{ episode.name }}</h2>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>{{ episode.id }}</td>
+        </tr>
+        <tr>
+            <th>Air Date</th>
+            <td>{{ episode.air_date }}</td> 
+        </tr>
+        <tr>
+            <th>Episode</th>
+            <td>{{ episode.episode }}</td>
+        </tr>
+        <tr>
+            <th>Characters</th>
+            <td>
+                <ul>
+                    <li *ngFor="let character of episode.characters">
+                        <a [href]="character" target="_blank">Character Link</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Created</th>
+            <td>{{ episode.created | date:'medium' }}</td> 
+        </tr>
+    </table>
+
+    <div>
+        <button (click)="goBack()" class="button">Back to Episodes</button>
+    </div>
+</div>
