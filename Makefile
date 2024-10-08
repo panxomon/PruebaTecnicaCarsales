@@ -7,4 +7,4 @@ down:
 	docker-compose down
 
 open:
-	@xdg-open http://localhost:4200/episode || open http://localhost:4200/episode || start http://localhost:4200/episode
+	@xdg-open http://localhost:4200/episodes || open http://localhost:4200/episodes || start http://localhost:4200/episodes
