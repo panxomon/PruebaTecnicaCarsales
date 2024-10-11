@@ -16,13 +16,7 @@ namespace rym.infrastructure
         {
             using (var client = _httpClientFactory.CreateClient())
             {
-                var response = await client.GetAsync(url);
-
-                if (response == null)
-                {
-                    Console.WriteLine($"RESPUESTA NULA");
-                    throw new Exception("RESPUESTA NULA");
-                }
+                var response = await client.GetAsync(url);               
                 
                 if (response.IsSuccessStatusCode)
                 {
